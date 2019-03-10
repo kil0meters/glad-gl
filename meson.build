@@ -99,16 +99,16 @@ endif
 
 
 if lib_type == 'static'
-    glad_gl = glad_gl_static_dep
+    glad_gl_dep = glad_gl_static_dep
 elif lib_type == 'shared' or lib_type == 'both'
-    glad_gl = glad_gl_shared_dep
+    glad_gl_dep = glad_gl_shared_dep
 endif
 
 
 
 
-install_headers('include/glad.h',
-                 subdir : 'glad')
+install_headers('include/glad/glad.h',
+                 subdir : 'glad/gl/3.3/compatibility')
 
 install_data(['LICENSE.txt'],
                rename : ['LICENSE.PD'],
